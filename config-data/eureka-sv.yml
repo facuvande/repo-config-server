@@ -1,0 +1,19 @@
+# Nombre del Microservicio, muy importante para poder reconocer nuestro servicio
+spring:
+  application:
+    name: eureka-server
+
+# Puerto que va a ejecutarse eureka, por defaulta 8761
+server:
+  port: 8761
+
+# Para que eureka no se tenga que autoregistrar ya que ella es la que registra a todos los demas servicios
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+
+# Intervalos de segundos que dice con que frecuencia un cliente de eureka va a renovar el contrato con el servidor
+eureka:
+  instance:
+    lease-renewal-interval-in-seconds: 0
